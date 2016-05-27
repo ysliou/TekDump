@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e67fdff6-a729-4532-bde2-181ddec95f78}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{ca1b51d3-9ebf-46ea-aa3d-83dce0ab2738}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{be7f745b-6f20-4bb5-b983-016936f54099}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Icon">
+      <UniqueIdentifier>{5b2713d3-6799-42bc-b1bc-56299cd36c32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library Files">
+      <UniqueIdentifier>{957cc482-a18a-43da-b79f-09838ff12dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library Files\VisualFX">
+      <UniqueIdentifier>{0b5d4ed7-4248-40eb-a288-f23fd6e608f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library Files\Serial">
+      <UniqueIdentifier>{cfe5b0d6-05bc-4411-9929-9d34ccba3e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library Files\Ini">
+      <UniqueIdentifier>{e62fef1f-f0be-493c-b528-dd6d1f2a2215}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Setup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TekDump.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TekDumpDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TekDumpView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\VisualFx\TabWnd.cpp">
+      <Filter>Library Files\VisualFX</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\VisualFx\VisualFx.cpp">
+      <Filter>Library Files\VisualFX</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Serial\Serial.cpp">
+      <Filter>Library Files\Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Serial\SerialEx.cpp">
+      <Filter>Library Files\Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Serial\SerialWnd.cpp">
+      <Filter>Library Files\Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="Lib\Ini\Ini.cpp">
+      <Filter>Library Files\Ini</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="h\MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\Setup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\TekDump.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\TekDumpDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\TekDumpView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\VisualFx\TabWnd.h">
+      <Filter>Library Files\VisualFX</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\VisualFx\VisualFx.h">
+      <Filter>Library Files\VisualFX</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Serial\Serial.h">
+      <Filter>Library Files\Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Serial\SerialEx.h">
+      <Filter>Library Files\Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Serial\SerialMFC.h">
+      <Filter>Library Files\Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Serial\SerialWnd.h">
+      <Filter>Library Files\Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="Lib\Ini\Ini.h">
+      <Filter>Library Files\Ini</Filter>
+    </ClInclude>
+    <ClInclude Include="Doc\VDD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="h\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="res\TekDump.exe.manifest">
+      <Filter>Resource Files</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\TekDump.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\TekDump.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Icon\Chart26.ico">
+      <Filter>Resource Files\Icon</Filter>
+    </None>
+    <None Include="res\Icon\Monitor.ico">
+      <Filter>Resource Files\Icon</Filter>
+    </None>
+    <None Include="res\Icon\TekDump.ico">
+      <Filter>Resource Files\Icon</Filter>
+    </None>
+  </ItemGroup>
+</Project>

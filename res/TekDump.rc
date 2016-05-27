@@ -1,0 +1,382 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "..\h\resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文 (繁體，台灣) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "..\\h\\resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TekDump.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.cht\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "icon\\TekDump.ico"
+IDI_MONITOR             ICON                    "Icon\\Monitor.ico"
+IDI_CHART               ICON                    "Icon\\Chart26.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_FRAME_PREV
+    BUTTON      ID_FRAME_NEXT
+    BUTTON      ID_FRAME_PREV10
+    BUTTON      ID_FRAME_NEXT10
+    BUTTON      ID_FRAME_FIRST
+    BUTTON      ID_FRAME_LAST
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "&Load image",                 ID_FILE_LOADTEST
+        MENUITEM SEPARATOR
+        MENUITEM "Recent Files",                ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About TekDump...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        ID_FRAME_NEXT,          VIRTKEY, NOINVERT
+    VK_END,         ID_FRAME_LAST,          VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        ID_FRAME_FIRST,         VIRTKEY, NOINVERT
+    VK_NEXT,        ID_FRAME_NEXT10,        VIRTKEY, NOINVERT
+    VK_PRIOR,       ID_FRAME_PREV10,        VIRTKEY, NOINVERT
+    VK_UP,          ID_FRAME_PREV,          VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 161, 83
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About TekDump"
+FONT 8, "Verdana", 400, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,13,17,20,20
+    LTEXT           "TekDump Version 1.2",IDC_STATIC,43,15,102,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005~2013, YSL",IDC_STATIC,43,30,102,8
+    DEFPUSHBUTTON   "Ok",IDOK,65,52,36,18,WS_GROUP
+END
+
+IDD_SETUP DIALOGEX 0, 0, 87, 203
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CHILD
+FONT 8, "Verdana", 0, 0, 0x1
+BEGIN
+    CTEXT           "Image",IDC_STATIC,8,63,22,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_IMAGE_COUNT,39,63,40,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    CTEXT           "Byte #",IDC_STATIC,8,22,23,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_TOTAL_BYTES,39,22,40,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    CTEXT           "Dataset",IDC_STATIC,8,36,26,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DATASET_SIZE,39,36,40,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    CTEXT           "Size",IDC_STATIC,8,49,15,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_IMAGE_SIZE,39,49,40,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "Save image",IDC_STATIC,2,92,83,71
+    LTEXT           "Path",IDC_STATIC,9,110,15,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_IMAGE_PATH,27,108,55,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Seq",IDC_STATIC,9,126,14,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_SEQ_NO,27,124,37,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Ok",IDC_SAVE_SETUP,15,143,25,14
+    PUSHBUTTON      "Abort",IDC_ABORT_SETUP,48,143,25,14
+    COMBOBOX        IDC_COMBO_COMPORT,44,169,34,110,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,WS_EX_RIGHT
+    COMBOBOX        IDC_COMBO_BAUDRATE,44,185,34,110,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,WS_EX_RIGHT
+    GROUPBOX        "Received data",IDC_STATIC,2,7,83,79
+    RTEXT           "COM port",IDC_STATIC,7,172,32,8,SS_CENTERIMAGE
+    RTEXT           "Baudrate",IDC_STATIC,8,188,31,8,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040404b0"
+        BEGIN
+            VALUE "FileDescription", "TekDump MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "TekDump"
+            VALUE "LegalCopyright", "Copyright (C) 2005"
+            VALUE "OriginalFilename", "TekDump.EXE"
+            VALUE "ProductName", "TekDump Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 157
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 85
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 201
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "TekDump.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "TekDump\n\nTekDum\n\n\nTekDump.Document\nTekDum Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "TekDump"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_SAVE            "Save image\nSave image"
+    ID_FILE_PRINT           "Print"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Show software version\nAbout"
+    ID_APP_EXIT             "Exit program\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this file"
+    ID_FILE_MRU_FILE2       "Open this file"
+    ID_FILE_MRU_FILE3       "Open this file"
+    ID_FILE_MRU_FILE4       "Open this file"
+    ID_FILE_MRU_FILE5       "Open this file"
+    ID_FILE_MRU_FILE6       "Open this file"
+    ID_FILE_MRU_FILE7       "Open this file"
+    ID_FILE_MRU_FILE8       "Open this file"
+    ID_FILE_MRU_FILE9       "Open this file"
+    ID_FILE_MRU_FILE10      "Open this file"
+    ID_FILE_MRU_FILE11      "Open this file"
+    ID_FILE_MRU_FILE12      "Open this file"
+    ID_FILE_MRU_FILE13      "Open this file"
+    ID_FILE_MRU_FILE14      "Open this file"
+    ID_FILE_MRU_FILE15      "Open this file"
+    ID_FILE_MRU_FILE16      "Open this file"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Hide or show toolbar\nToggle tool bar"
+    ID_VIEW_STATUS_BAR      "Hide or show status bar\nToggle status bar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "改變視窗大小"
+    AFX_IDS_SCMOVE          "改變視窗位置"
+    AFX_IDS_SCMINIMIZE      "縮小視窗到一圖示"
+    AFX_IDS_SCMAXIMIZE      "放大視窗到全螢幕"
+    AFX_IDS_SCNEXTWINDOW    "切換到下一個文件視窗"
+    AFX_IDS_SCPREVWINDOW    "切換到前一個文件視窗"
+    AFX_IDS_SCCLOSE         "關閉工作中視窗並提示儲存文件"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "還原視窗至原來大小"
+    AFX_IDS_SCTASKLIST      "叫出「工作列」"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FRAME_FIRST          "Show first image"
+    ID_FRAME_PREV10         "Goto previous 10th image"
+    ID_FRAME_PREV           "Show previous image"
+    ID_FRAME_NEXT           "Show next image"
+    ID_FRAME_NEXT10         "Goto next 10th image"
+    ID_FRAME_LAST           "Show last image"
+END
+
+#endif    // 中文 (繁體，台灣) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE 4, 1
+#pragma code_page(950)
+#endif //_WIN32
+#include "res\TekDump.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.cht\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
