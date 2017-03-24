@@ -39,16 +39,16 @@ END_MESSAGE_MAP()
 
 CSetup	*g_pSetup = NULL;
 
-struct 
+/**	\brief	Baud rate options.
+*/
+CSerial::EBaudrate bpsTable[] =
 {
-    CSerial::EBaudrate	bpsID;
-    long    bps;
-} baudrateTable[] = {
-    {CSerial::EBaud9600,    9600L},
-    {CSerial::EBaud19200,   19200L},
-    {CSerial::EBaud38400,   38400L},
-    {CSerial::EBaud57600,   57600L},
-    {CSerial::EBaud115200,  115200L}};
+	CSerial::EBaud9600,
+	CSerial::EBaud19200,
+	CSerial::EBaud38400,
+	CSerial::EBaud57600,
+	CSerial::EBaud115200,
+};
 
 /** \brief  Constructor.
 */
@@ -116,6 +116,15 @@ void	CSetup::OnInitialUpdate()
 	CFormView::OnInitialUpdate();
 	SetButton(FALSE);
 
+	//  Initial baudrate selection ComboBox
+	for (int i=0; i<LENGTH(bpsTable); i++)
+	{
+		CString bpsStr;
+		bpsStr.Format(_T("%ld"), bpsTable[i]);
+		m_comboBaudrate.AddString(bpsStr);
+	}
+	m_comboBaudrate.SetCurSel(m_bpsSel);
+
 	//  COM port
 	int nIndex = 0;
 	for (int comPort=1; comPort<30; comPort++)
@@ -132,18 +141,10 @@ void	CSetup::OnInitialUpdate()
 		}
 	}
 	if (m_comPortSel >= 0)
-		m_comboComPort.SetCurSel(m_comPortSel);
-
-	//  Baudrate
-	for (int i=0; i<LENGTH(baudrateTable); i++)
 	{
-		CString bpsStr;
-		bpsStr.Format(_T("%ld"), baudrateTable[i].bps);
-		m_comboBaudrate.AddString(bpsStr);
+		m_comboComPort.SetCurSel(m_comPortSel);
+		OpenComPort(m_comPort);
 	}
-	m_comboBaudrate.SetCurSel(m_bpsSel);
-
-	OpenComPort(m_comPort);
 
 	UpdateData();
 }
@@ -226,12 +227,13 @@ void	CSetup::OnSelchangeComboBaudrate()
 */
 BOOL	CSetup::OpenComPort(int comPort)
 {
+    static TCHAR portName[20];
+
 	if (IsOpen())
 	    Close();
 
 	if (comPort > 0)
 	{
-	    TCHAR portName[20];
 	    if (comPort < 10)
     		_stprintf_s(portName, sizeof(portName), _T("COM%d"), comPort);
 	    else
@@ -239,7 +241,7 @@ BOOL	CSetup::OpenComPort(int comPort)
 
 	    Open(portName, this, WM_NULL, 0, 40960, 40960);
 
-	    SetProtocol(baudrateTable[m_bpsSel].bpsID, EParNone, EData8, EStop1, EHandshakeHardware);
+	    SetProtocol(bpsTable[m_bpsSel], EParNone, EData8, EStop1, EHandshakeHardware);
 
 	    return TRUE;
 	}

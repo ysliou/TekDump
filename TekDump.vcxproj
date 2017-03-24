@@ -94,6 +94,8 @@
       <DataExecutionPrevention>
       </DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
+      <HeapReserveSize>2000000</HeapReserveSize>
+      <StackReserveSize>2000000</StackReserveSize>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
