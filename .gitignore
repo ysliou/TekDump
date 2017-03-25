@@ -1,4 +1,4 @@
 *.aps
 *.user
-*.png
 *.ini
+TestImg/*.png
