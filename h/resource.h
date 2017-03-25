@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by e:\Program\Windows\TekDump\res\TekDump.rc
+// Used by e:\Projects\Scope\TekDump\res\TekDump.rc
 //
 #define IDR_MAINFRAME                   100
 #define IDD_ABOUTBOX                    101

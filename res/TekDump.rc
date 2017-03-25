@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 中文 (繁體，台灣) resources
+// Chinese (Traditional, Taiwan) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
@@ -106,8 +106,8 @@ IDR_MAINFRAME MENU
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
-        MENUITEM "&Load image",                 ID_FILE_LOADTEST
+        MENUITEM "&Save\tAlt+S",                ID_FILE_SAVE
+        MENUITEM "&Load image as received\tAlt+L", ID_FILE_LOADTEST
         MENUITEM SEPARATOR
         MENUITEM "Recent Files",                ID_FILE_MRU_FILE1, GRAYED
         MENUITEM SEPARATOR
@@ -158,8 +158,8 @@ CAPTION "About TekDump"
 FONT 8, "Verdana", 400, 0, 0x0
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,13,17,20,20
-    LTEXT           "TekDump Version 1.2",IDC_STATIC,43,15,102,8,SS_NOPREFIX
-    LTEXT           "Copyright (C) 2005~2013, YSL",IDC_STATIC,43,30,102,8
+    LTEXT           "TekDump Version 1.3",IDC_STATIC,43,15,102,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005~2017, YSL",IDC_STATIC,43,30,102,8
     DEFPUSHBUTTON   "Ok",IDOK,65,52,36,18,WS_GROUP
 END
 
@@ -177,7 +177,7 @@ BEGIN
     EDITTEXT        IDC_IMAGE_SIZE,39,49,40,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
     GROUPBOX        "Save image",IDC_STATIC,2,92,83,71
     LTEXT           "Path",IDC_STATIC,9,110,15,8,SS_CENTERIMAGE
-    EDITTEXT        IDC_IMAGE_PATH,27,108,55,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_IMAGE_PATH,27,108,55,12,ES_AUTOHSCROLL
     LTEXT           "Seq",IDC_STATIC,9,126,14,8,SS_CENTERIMAGE
     EDITTEXT        IDC_SEQ_NO,27,124,37,12,ES_AUTOHSCROLL
     DEFPUSHBUTTON   "Ok",IDC_SAVE_SETUP,15,143,25,14
@@ -215,7 +215,7 @@ BEGIN
             VALUE "FileDescription", "TekDump MFC Application"
             VALUE "FileVersion", "1, 0, 0, 1"
             VALUE "InternalName", "TekDump"
-            VALUE "LegalCopyright", "Copyright (C) 2005"
+            VALUE "LegalCopyright", "Copyright (C) 2017"
             VALUE "OriginalFilename", "TekDump.EXE"
             VALUE "ProductName", "TekDump Application"
             VALUE "ProductVersion", "1, 0, 0, 1"
@@ -353,7 +353,7 @@ BEGIN
     ID_FRAME_LAST           "Show last image"
 END
 
-#endif    // 中文 (繁體，台灣) resources
+#endif    // Chinese (Traditional, Taiwan) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

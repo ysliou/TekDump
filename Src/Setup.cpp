@@ -70,7 +70,7 @@ CSetup::CSetup() : CFormView(CSetup::IDD)
 	CIni ini;
 	ini.SetPathName(g_iniName);
 
-	m_imagePath = ini.GetString(_T("Setup"), _T("m_imagePath"), _T("Image"));
+	m_imagePath = ini.GetString(_T("Setup"), _T("m_imagePath"), _T("TestImg"));
 	m_seqNo	    = ini.GetUInt(_T("Setup"), _T("m_seqNo"), 0);
 	m_comPort   = ini.GetUInt(_T("Setup"), _T("m_comPort"), 1);
 	m_bpsSel    = ini.GetUInt(_T("Setup"), _T("m_bpsSel"), 0);
