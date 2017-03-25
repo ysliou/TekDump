@@ -10,3 +10,5 @@ The received hard copy can be saved as PNG files.
 
 TestImg folder contains some sample pictures that are captured from THS720.
 There is a LOAD function to load the sample pictures and simulate a picture is captured from THS720.
+
+![alt Screenshot](https://github.com/ysliou/TekDump/blob/master/pictures/TekDump.png)
